@@ -1,5 +1,7 @@
 # bits
 
+[![Build Status](https://secure.travis-ci.org/flosse/bits.png)](http://travis-ci.org/flosse/bits)
+
 ## Usage
 
 ```shell
