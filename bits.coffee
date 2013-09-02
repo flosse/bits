@@ -1,5 +1,5 @@
 ###
-Copyright (c) Markus Kohlhase <mail@markus-kohlhase.de>
+Copyright (c) 2012 - 2013 Markus Kohlhase <mail@markus-kohlhase.de>
 ###
 
 set   = (val, bitNr) -> val |=  bitMask bitNr
