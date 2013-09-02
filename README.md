@@ -1,6 +1,8 @@
 # bits
 
 [![Build Status](https://secure.travis-ci.org/flosse/bits.png)](http://travis-ci.org/flosse/bits)
+[![Dependency Status](https://gemnasium.com/flosse/bits.png)](https://gemnasium.com/flosse/bits.png)
+[![NPM version](https://badge.fury.io/js/bits.png)](http://badge.fury.io/js/bits)
 
 ## Usage
 
