@@ -6,12 +6,33 @@
 
 ## Usage
 
+If you're using Node.js type:
+
 ```shell
-npm install bits
+npm install --save bits
 ```
+
+Then load the module:
 
 ```javascript
 var bits = require("bits");
+```
+
+If you'd like to use it in your browser application, just link the JS file:
+
+```html
+<script src="bits.js"></script>
+```
+
+You can also use script loaders like require.js:
+
+```javascript
+define(["./bits"], function(bits){ /* .. */ });
+```
+
+Now here is the API:
+
+```javascript
 var data = 0;
 data = bits.set(data, 2);
 data = bits.set(data, [0,3,7]); // set bit 0, 3 and 7

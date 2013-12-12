@@ -22,11 +22,20 @@ multi = (val, start, end, fn) ->
   val
 
 bit =
-  get           : getBit
-  test          : testBit
-  set           : setBit
-  clear         : clearBit
-  toggle        : toggleBit
+  get    : getBit
+  test   : testBit
+  set    : setBit
+  clear  : clearBit
+  toggle : toggleBit
 
-module.exports = bit if module?.exports?
-window.bit     = bit if window?
+# AMD support
+if define?.amd?
+  define -> bit
+
+# Browser support
+else if window?
+  window.bit = bit
+
+# Node.js support
+else if module?.exports?
+  module.exports = bit
