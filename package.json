@@ -1,6 +1,6 @@
 {
   "name":         "bits",
-  "version":      "0.1.0",
+  "version":      "0.1.1",
   "main":         "./bits",
   "description":  "Easy bit manipulation",
   "author":       "Markus Kohlhase <mail@markus-kohlhase.de>",
