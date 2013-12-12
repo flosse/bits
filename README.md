@@ -18,7 +18,14 @@ Then load the module:
 var bits = require("bits");
 ```
 
-If you'd like to use it in your browser application, just link the JS file:
+If you'd like to use it in your browser application, download it 
+manually or use bower:
+
+```shell
+bower install bits
+```
+
+...and then just link the JS file:
 
 ```html
 <script src="bits.js"></script>
