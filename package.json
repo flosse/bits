@@ -8,9 +8,9 @@
   "engine":       "node",
   "devDependencies":
   {
-    "buster":               "~0.6.12",
-    "buster-coffee":        "~0.1.4",
-    "coffee-script":        "~1.6.3"
+    "mocha":          "~1.15.1",
+    "chai":           "1.8.1",
+    "coffee-script":  "~1.6.3"
   },
   "repository":
   {
@@ -18,7 +18,7 @@
     "url":  "git://github.com/flosse/bits.git"
   },
   "scripts": {
-    "test": "buster test",
-    "prepublish": "coffee -c bits.coffee && buster test"
+    "test": "./node_modules/.bin/mocha --repoter spec --compilers coffee:coffee-script ./*.spec.coffee",
+    "prepublish": "coffee -c bits.coffee && npm test"
   }
 }

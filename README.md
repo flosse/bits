@@ -22,6 +22,10 @@ data = bits.test(data, 6);      // returns true or false
 data = bits.get(data, 6);       // returns 0 or 1
 ```
 
+## Test
+
+    npm test
+
 ## License
 
 MIT license
