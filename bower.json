@@ -1,6 +1,5 @@
 {
   "name": "bits",
-  "version": "0.1.1",
   "description":  "Easy bit manipulation",
   "homepage": "https://github.com/flosse/bits",
   "authors": [
