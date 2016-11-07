@@ -1,16 +1,16 @@
 ###
-Copyright (c) 2012 - 2013 Markus Kohlhase <mail@markus-kohlhase.de>
+Copyright (c) 2012 - 2016 Markus Kohlhase <mail@markus-kohlhase.de>
 ###
 
 set   = (val, bitNr) -> val |=  bitMask bitNr
 clear = (val, bitNr) -> val &= ~bitMask bitNr
 
-bitMask   = (bitNr) -> 1 << bitNr
-getBit    = (val, bitNr) -> if testBit(val, bitNr) then 1 else 0
-testBit   = (val, bitNr) -> (val & bitMask bitNr) isnt 0
+bitMask   = (bitNr)           -> 1 << bitNr
+getBit    = (val, bitNr)      -> if testBit(val, bitNr) then 1 else 0
+testBit   = (val, bitNr)      -> (val & bitMask bitNr) isnt 0
 setBit    = (val, bitNr, end) -> multi val, bitNr, end, set
 clearBit  = (val, bitNr, end) -> multi val, bitNr, end, clear
-toggleBit = (val, bitNr) -> val ^=  bitMask bitNr
+toggleBit = (val, bitNr)      -> val ^=  bitMask bitNr
 
 multi = (val, start, end, fn) ->
   if start instanceof Array

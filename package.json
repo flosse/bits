@@ -1,24 +1,25 @@
 {
-  "name":         "bits",
-  "version":      "0.1.1",
-  "main":         "./bits",
-  "description":  "Easy bit manipulation",
-  "author":       "Markus Kohlhase <mail@markus-kohlhase.de>",
-  "licenses":     [{"type": "MIT"}],
-  "engine":       "node",
-  "devDependencies":
-  {
-    "mocha":          "~1.15.1",
-    "chai":           "1.8.1",
-    "coffee-script":  "~1.6.3"
+  "name": "bits",
+  "version": "0.1.2",
+  "main": "./bits",
+  "description": "Easy bit manipulation",
+  "keywords": [
+    "bit"
+  ],
+  "author": "Markus Kohlhase <mail@markus-kohlhase.de>",
+  "license": "MIT",
+  "engine": "node",
+  "devDependencies": {
+    "chai": "1.8.1",
+    "coffee-script": "^1.11.1",
+    "mocha": "~1.15.1"
   },
-  "repository":
-  {
+  "repository": {
     "type": "git",
-    "url":  "git://github.com/flosse/bits.git"
+    "url": "git://github.com/flosse/bits.git"
   },
   "scripts": {
-    "test": "./node_modules/.bin/mocha --repoter spec --compilers coffee:coffee-script ./*.spec.coffee",
+    "test": "./node_modules/.bin/mocha --repoter spec --compilers coffee:coffee-script/register ./*.spec.coffee",
     "prepublish": "coffee -c bits.coffee && npm test"
   }
 }
