@@ -1,6 +1,6 @@
 {
   "name": "bits",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "main": "./bits",
   "description": "Easy bit manipulation",
   "keywords": [
@@ -10,8 +10,11 @@
   "license": "MIT",
   "engine": "node",
   "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-core": "^6.18.2",
+    "babel-preset-es2015": "^6.18.0",
     "chai": "1.8.1",
-    "coffee-script": "^1.11.1",
+    "eslint": "^2.13.1",
     "mocha": "~1.15.1"
   },
   "repository": {
@@ -19,7 +22,9 @@
     "url": "git://github.com/flosse/bits.git"
   },
   "scripts": {
-    "test": "./node_modules/.bin/mocha --repoter spec --compilers coffee:coffee-script/register ./*.spec.coffee",
-    "prepublish": "coffee -c bits.coffee && npm test"
+    "lint": "eslint bits.es6.js",
+    "build": "babel bits.es6.js -o bits.js",
+    "test": "npm run lint && npm run build && ./node_modules/.bin/mocha --repoter spec ./*.spec.js",
+    "prepublish": "npm test"
   }
 }
